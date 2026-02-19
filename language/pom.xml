@@ -46,7 +46,7 @@
     <artifactId>simplelanguage-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <artifactId>simplelanguage</artifactId>
+  <artifactId>lamalanguage</artifactId>
   <build> 
     <plugins>
       <plugin>
@@ -64,11 +64,12 @@
         <version>3.1.2</version>
         <configuration>
            <argLine>
-               --add-exports=java.base/jdk.internal.module=truffle.tck
+               -Xss16m --add-exports=java.base/jdk.internal.module=truffle.tck
             </argLine>
             <includes>
               <include>**/*TestSuite.java</include>
               <include>**/*Test.java</include>
+              <include>**/*Tests.java</include>
             </includes>
         </configuration>
       </plugin>
@@ -79,20 +80,23 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.11.0</version>
           <configuration>
-            <source>17</source>
-            <target>17</target>
-	     <annotationProcessorPaths>
-	       <path>
-	        <groupId>org.graalvm.truffle</groupId>
-	            <artifactId>truffle-dsl-processor</artifactId>
-	            <version>${graalvm.version}</version>
-	          </path>
-	        </annotationProcessorPaths>
+            <source>21</source>
+            <target>21</target>
+            <annotationProcessorPaths>
+              <path>
+                  <groupId>org.graalvm.truffle</groupId>
+                    <artifactId>truffle-dsl-processor</artifactId>
+                    <version>${graalvm.version}</version>
+                </path>
+            </annotationProcessorPaths>
+            <compilerArgs>
+              <arg>--enable-preview</arg>
+            </compilerArgs>
           </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
-    <finalName>simplelanguage</finalName>
+    <finalName>lamalanguage</finalName>
   </build>
   <dependencies>
 	<dependency>

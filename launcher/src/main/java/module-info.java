@@ -38,7 +38,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-open module org.graalvm.sl.launcher {
+open module org.graalvm.lama.launcher {
 	requires org.graalvm.polyglot;
-	exports com.oracle.truffle.sl.launcher;
+	exports com.oracle.truffle.lama.launcher;
 }

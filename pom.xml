@@ -50,13 +50,21 @@
     <graalvm.version>24.2.0</graalvm.version>
     <maven.compiler.source>21</maven.compiler.source>
     <maven.compiler.target>21</maven.compiler.target>
-    <launcherClass>org.graalvm.sl.launcher/com.oracle.truffle.sl.launcher.SLMain</launcherClass>
+    <launcherClass>org.graalvm.sl.launcher/com.oracle.truffle.sl.launcher.LamaMain</launcherClass>
   </properties>
   <packaging>pom</packaging>
   <modules>
     <module>language</module>
-    <module>tck</module>
+    <!-- <module>tck</module> -->
     <module>launcher</module>
     <module>standalone</module>
   </modules>
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.10.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 </project>
