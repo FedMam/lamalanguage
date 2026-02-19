@@ -43,7 +43,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.oracle</groupId>
-    <artifactId>simplelanguage-parent</artifactId>
+    <artifactId>lamalanguage-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
   <artifactId>launcher</artifactId>
@@ -85,7 +85,7 @@
     </dependency>
     <dependency>
       <groupId>com.oracle</groupId>
-      <artifactId>simplelanguage</artifactId>
+      <artifactId>lamalanguage</artifactId>
       <version>1.0.0-SNAPSHOT</version>
       <scope>runtime</scope>
     </dependency>
