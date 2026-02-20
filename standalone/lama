@@ -45,6 +45,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 PROGRAM_ARGS=()
 JAVA_ARGS=()
+
+# Increase stack size
+JAVA_ARGS+=("-Xss16M") ;;
+
 if [ -d "$JAVA_HOME/lib/graalvm" ]; then
 
     for opt in "$@"
